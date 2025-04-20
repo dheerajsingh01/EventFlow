@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PricingSection from './PricingSection.jsx';
 import TestimonialsSection from './TestimonialsSection.jsx';
 import Footer from './Footer.jsx';
+import image from '../assets/event.avif'
 
 const Home = () => {
   const { user } = useAuth();
@@ -65,14 +66,15 @@ const Home = () => {
           )}
         </div>
 
-        {/* Right: Animation or Image */}
-        <div className="flex justify-center">
-          <img
-            src="./assets/event.avif" // Replace with your own animated image or component
-            alt="Event illustration"
-            className="w-full max-w-md"
-          />
-        </div>
+        <div className="flex justify-center relative">
+  <div className="relative w-full max-w-md rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 p-4">
+    <img
+      src={image}
+      alt="Event illustration"
+      className="w-full h-auto object-cover rounded-lg"
+    />
+  </div>
+</div>
       </section>
 
       {/* Features Section */}
